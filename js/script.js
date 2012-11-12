@@ -18,7 +18,7 @@ var items = [
 ];
 var node = document.getElementById("node");
 var onChangeCallback = function(item) { console.log(item); }; 
-var selectBox = new SelectBox({id:'',value:""});
+var selectBox = new SelectBox(items);
 selectBox.appendTo(node);
 selectBox.selectById("first");
 selectBox.selectByName("Twice per ASDF ASDFASD FASD FASD Fweek");
@@ -31,7 +31,7 @@ selectBox.enable();
 selectBox.addItem({id:"item",value:"item"});
 selectBox.insertItem(3,{id:"item",value:"item"});
 selectBox.removeItemByPos(2);
-//selectBox.removeItemById("Second");
+selectBox.removeItemById("Second");
 selectBox.updateItemName("item", "Item Updated");
 selectBox.selectByPos(1);
 }
